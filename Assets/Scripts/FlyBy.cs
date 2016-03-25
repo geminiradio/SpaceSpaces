@@ -3,6 +3,8 @@ using System.Collections;
 
 public class FlyBy : MonoBehaviour {
 
+    public int DEBUG_indexOverride = -1;
+
 	public float minWait;
 	public float maxWait;
 
@@ -59,6 +61,9 @@ public class FlyBy : MonoBehaviour {
 
 		int whichPath = Random.Range(0,StartPoints.Length);
 
+        if (DEBUG_indexOverride != -1)
+            whichPath = DEBUG_indexOverride;
+
 		start = StartPoints[whichPath];
 		end = EndPoints[whichPath];
 		float duration = durations[whichPath];
@@ -70,6 +75,7 @@ public class FlyBy : MonoBehaviour {
 
 		// put the capsule in the start position.
 		transform.position = start.position;
+        transform.rotation = start.rotation;
 
 	}
 
