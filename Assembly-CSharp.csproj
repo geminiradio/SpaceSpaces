@@ -80,8 +80,8 @@
      <Compile Include="Assets\Scripts\SteamVR\Scripts\SteamVR_UpdatePoses.cs" />
      <Compile Include="Assets\Scripts\SteamVR\Scripts\SteamVR_Utils.cs" />
      <Compile Include="Assets\Scripts\TriggerApproach.cs" />
+     <Compile Include="Assets\Scripts\VRInteractable.cs" />
      <Compile Include="Assets\Scripts\WandController.cs" />
-     <Compile Include="Assets\VRInteractable.cs" />
      <None Include="Assets\Scripts\SteamVR\Resources\SteamVR_Fade.shader" />
      <None Include="Assets\Scripts\SteamVR\Resources\SteamVR_BlitFlip.shader" />
      <None Include="Assets\Scripts\SteamVR\Resources\SteamVR_ClearAll.shader" />
