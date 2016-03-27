@@ -74,7 +74,7 @@ public class GlowRock : MonoBehaviour {
 	void Update () {
 
 		// if i'm the manager and it's time to do so, tell all the other rocks to stop auto-triggering after this next one
-		if ( (manager == this) && (Time.time > allRocksTriggeredDuration))
+		if ( (manager == this) && (Time.time > untriggerAllRocksTime))
 		{
 			allRocksTriggered = false;
 			foreach (GlowRock rock in allRocks)
@@ -191,6 +191,7 @@ public class GlowRock : MonoBehaviour {
 		manager.TriggerAllOtherRocks();
 	}
 
+	// manager only
 	public void TriggerAllOtherRocks ()
 	{
 		// even if all rocks are triggered, reset the timer
